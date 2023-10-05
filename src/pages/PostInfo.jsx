@@ -19,7 +19,7 @@ function PostInfo() {
                 <h2>{data.title}</h2>
                 <h3>Автор: {data.userId}</h3>
                 <span>{data.body}</span>
-                <Link to="/"><Button text="Назад" /></Link>
+                <Link to="/pic-test-task"><Button text="Назад" /></Link>
             </div>}
             </div>
         </>
