@@ -10,8 +10,8 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/post/:id' element={<PostInfo />} />
+        <Route path='pic-test-task' element={<Home />} />
+        <Route path='pic-test-task/post/:id' element={<PostInfo />} />
       </Routes>
     </>
   )
