@@ -4,7 +4,7 @@ import './Links.css';
 function GitHubLink() {
     
     return (
-        <a href='https://github.com/' target="_blank">
+        <a href='https://github.com/mashtakovmm/pic-test-task' target="_blank">
             GitHub
         </a>
     )
