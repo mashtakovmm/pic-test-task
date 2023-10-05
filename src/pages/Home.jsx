@@ -6,10 +6,13 @@ import './Home.css'
 function Home() {
 
     return (
+    <>
+        <Header />
         <div className='home-container'> 
-            <Header />
             <PostsList />
         </div>
+    </>
+
 
     );
 }

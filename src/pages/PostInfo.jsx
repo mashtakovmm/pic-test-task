@@ -8,7 +8,7 @@ import './PostInfo.css'
 
 function PostInfo() {
     const { id } = useParams();
-    const { data, isLoading, isError, isSuccess } = useGetPostQuery(`${id}`)
+    const { data, isLoading } = useGetPostQuery(`${id}`)
 
     return (
         <>

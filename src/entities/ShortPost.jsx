@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 
 function ShortPost(props) {
-    const {title, body, id} = props
+    const {title, body, id, offset} = props
     const observer = useRef();
     const [isInViewport, setIsInViewport] = useState(true);
     const [width, setWidth] = useState(0);
@@ -24,8 +24,8 @@ function ShortPost(props) {
         const elem = observer.current;
         const rect = elem.getBoundingClientRect();
         const isVisible = (
-            rect.top <= window.innerHeight + 300 &&
-            rect.bottom >= -300
+            rect.top <= window.innerHeight + offset &&
+            rect.bottom >= -offset
         );
         setIsInViewport(isVisible)
     }

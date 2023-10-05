@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import ShortPost from '../entities/ShortPost';
 import LoadingSpinner from '../shared/LoadingSpinner';
 import { useGetAllPostsQuery } from '../utils/Fetcher';
-import './PostsList.css'
 
 function PostsList() {
 
@@ -52,11 +51,11 @@ function PostsList() {
     }
 
     return (
-        <div className='post-list'>
+        <>
             {items.map((post)=> {return (
-                <ShortPost title={post.title} body={post.body} id={post.id}/>
+                <ShortPost title={post.title} body={post.body} id={post.id} offset={offset}/>
             );})}
-        </div>
+        </>
         )
 }
 
