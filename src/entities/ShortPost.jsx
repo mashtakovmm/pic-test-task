@@ -35,7 +35,7 @@ function ShortPost(props) {
             <div className='short-post-containter' ref={observer}>
                 <h2 className='h2'>{id}. {title}</h2>
                 <span className='span'>{body}</span>
-                <Link to={ `/post/${id}` }><Button text="Просмотр"></Button></Link>
+                <Link to={ `pic-test-task/post/${id}` }><Button text="Просмотр"></Button></Link>
             </div>
         ) : (
             <div className='short-post-containter' ref={observer} style={{minWidth:width, minHeight:height}}>
