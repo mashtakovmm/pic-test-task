@@ -1,3 +1,5 @@
+# Project is using FSD (Feature-Sliced Design) architecture
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
