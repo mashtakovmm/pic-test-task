@@ -10,7 +10,8 @@
     margin-top: 10px;
     margin-bottom: 10px;
     background-color: rgb(83, 91, 242, 0.08);
-    gap: 5px;
+    gap: 30px;
+    height: 350px;
 }
 
 .h2 {

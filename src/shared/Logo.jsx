@@ -3,7 +3,7 @@ import './Links.css';
 import { Link } from 'react-router-dom';
 
 function Logo() {
-    
+
     return (
         <Link to="/pic-test-task">
             <svg xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 -960 960 960" width="40">

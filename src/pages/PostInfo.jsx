@@ -14,13 +14,13 @@ function PostInfo() {
         <>
             <Header />
             <div className="container">
-            {isLoading ? <LoadingSpinner /> : 
-            <div className="post-info-container">
-                <h2>{data.title}</h2>
-                <h3>Автор: {data.userId}</h3>
-                <span>{data.body}</span>
-                <Link to="/pic-test-task"><Button text="Назад" /></Link>
-            </div>}
+                {isLoading ? <LoadingSpinner /> :
+                    <div className="post-info-container">
+                        <h2>{data.title}</h2>
+                        <h3>Автор: {data.userId}</h3>
+                        <span>{data.body}</span>
+                        <Link to="/pic-test-task"><Button text="Назад" /></Link>
+                    </div>}
             </div>
         </>
     )
