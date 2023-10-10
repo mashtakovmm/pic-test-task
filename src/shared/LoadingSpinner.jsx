@@ -1,7 +1,7 @@
 import '../shared/LoadingSpinner.css'
 import React from 'react'
 
-function LoadingSpinner(){
+function LoadingSpinner() {
     return (<div className="spinner"></div>)
 }
 

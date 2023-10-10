@@ -9,9 +9,9 @@ import './index.css'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
-    <ApiProvider api={postsApi}>
-      <App />
-    </ApiProvider>
+      <ApiProvider api={postsApi}>
+        <App />
+      </ApiProvider>
     </BrowserRouter>
   </React.StrictMode>
 )
