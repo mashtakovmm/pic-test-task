@@ -17,8 +17,6 @@ function PostsList() {
     // number of loaded posts for first load
     // used for slicing (+10 posts) later
     const [n, setN] = useState(10);
-    //offset for loading and unloading items
-    const [offset, setOffset] = useState(300);
     const [bufferedItems, setBufferedItems] = useState(4);
 
     const visibleChildren = useMemo(() => {
@@ -42,38 +40,14 @@ function PostsList() {
         });
     }, [items, gap, listItemHeight, scrollPosition, containerHeight, bufferedItems]);
 
-
-
-
-    // function LoadMoreData() {
-    //     if (items.length !== data.length) {
-    //         setItems([...items, ...data.slice(n, n + 10)])
-    //         setN(n + 10)
-    //     }
-    // }
-
     function LoadMoreData() {
         setItems([...items, ...data.slice(n, n + 10)])
         setN(n + 10)
     }
 
-    // function HandleScroll() {
-    //     const scrollTop = document.documentElement.scrollTop
-    //     const scrollHeight = document.documentElement.scrollHeight
-    //     const clientHeight = document.documentElement.clientHeight
-    //     if (scrollTop + clientHeight + offset >= scrollHeight) {
-    //         LoadMoreData()
-    //     }
-    // };
-
     const onScroll = useCallback((e) => {
         setScrollPosition(e.target.scrollTop)
     }, []);
-
-    // useEffect(() => {
-    //     window.addEventListener('scroll', onScroll)
-    //     return () => window.removeEventListener('scroll', onScroll)
-    // }, [items]);
 
     useEffect(() => {
         const resizeHandler = (e) => {
@@ -113,9 +87,6 @@ function PostsList() {
 
     return (
         <div className='list-container' ref={containerRef} onScroll={onScroll}>
-            {/* {items.map((post)=> (
-                <ShortPost title={post.title} body={post.body} id={post.id} offset={offset}/>
-            ))}; */}
             {visibleChildren}
         </div>
     )
